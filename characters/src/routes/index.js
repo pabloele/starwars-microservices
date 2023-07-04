@@ -6,8 +6,7 @@ const router = Router();
 
 router.get("/characters", controllers.getCharacters);
 
-router.post(
-  "/characters",
+router.post("/characters",
   middlewares.characterValidation,
   controllers.createCharacter
 );
